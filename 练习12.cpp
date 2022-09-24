@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int q,w,e,a,s,d,z,x,c;
+	cin>>q>>w>>e;
+	cin>>a>>s>>d;
+	cin>>z>>x>>c;
+	long long num1,num2,num3;
+	num1=q*365+w*30+e;
+	num2=a*365+s*30+d;
+	num3=z*365+x*30+c;
+	if(num1<num2&&num1<num3)
+	{
+		cout<<"A";
+		if(num2<num3)
+		{
+			cout<<"BC"<<endl;
+		}
+		else
+		{
+			cout<<"CB"<<endl;
+		}
+	}
+	if(num2<num1&&num2<num3)
+	{
+		cout<<"B";
+		if(num1<num3)
+		{
+			cout<<"AC"<<endl;
+		}
+		else
+		{
+			cout<<"CA"<<endl;
+		}
+	}
+	if(num3<num1&&num3<num2)
+	{
+		cout<<"C";
+		if(num1<num2)
+		{
+			cout<<"AB"<<endl;
+		}
+		else
+		{
+			cout<<"BA"<<endl;
+		}
+	}
+}
